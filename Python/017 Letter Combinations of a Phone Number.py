@@ -19,8 +19,7 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
-        map = ['', '', 'abc', 'def', 'ghi',
-               'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+        map = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
 
         length = len(digits)
         if length == 0:
