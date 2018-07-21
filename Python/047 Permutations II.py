@@ -10,6 +10,7 @@
 #   [2,1,1]
 # ]
 
+
 class Solution(object):
     def permuteUnique(self, nums):
         """
@@ -20,13 +21,11 @@ class Solution(object):
         length = len(nums)
         result = []
 
-        def callback (i, group):
-            
+        def callback(i, group):
             if len(group) == length:
                 arr = [nums[i] for i in group]
-                print(arr)
                 result.append(arr)
-                return 
+                return
             for j in range(0, length):
 
                 if j in group:
@@ -42,7 +41,8 @@ class Solution(object):
                 continue
             callback(i, [i])
         return result
+
 # test
 s = Solution()
 print(s.permuteUnique([1, 1, 2]))
-print(s.permuteUnique([3,3,0,3]))
+print(s.permuteUnique([3, 3, 0, 3]))
