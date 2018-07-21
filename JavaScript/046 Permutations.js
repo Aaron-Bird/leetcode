@@ -58,5 +58,5 @@ var permute = function (nums) {
 };
 
 // test
-// console.log(permute([1,2,3]));
+console.log(permute([1,2,3]));
 console.log(permute([0, 1]));
