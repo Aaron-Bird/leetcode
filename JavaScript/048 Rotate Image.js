@@ -77,7 +77,6 @@ var rotate = function (matrix) {
             while (counter < 4) {
                 afterI = beforeI * 0 + beforeJ * 1;
                 afterJ = beforeI * -1 + beforeJ * 0;
-        
                 temp = matrix[originY - afterJ][afterI + originX];
                 matrix[originY - afterJ][afterI + originX] = beforeValue;
 
@@ -87,7 +86,6 @@ var rotate = function (matrix) {
 
                 counter++;
             }
-
         }
     }
     if (fillY) {

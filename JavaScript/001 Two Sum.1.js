@@ -14,7 +14,7 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
     let i = 0;
     let map = {};
     for (let i = 0; i < nums.length; i++) {
@@ -26,10 +26,12 @@ var twoSum = function(nums, target) {
                 return [i, map[n]];
             }
         }
-        
+
     }
-    nums = nums.sort(function(i, j) {return i - j})
-    while (i < nums.length ) {
+    nums = nums.sort(function (i, j) {
+        return i - j
+    })
+    while (i < nums.length) {
         while (nums[i] + nums[i] > target) {
             i++;
         };
@@ -54,14 +56,12 @@ var twoSum = function(nums, target) {
         }
         i++;
     }
-    return [];  
+    return [];
 };
 
 // test
-console.log(twoSum([2,7,11,15], 9));
-console.log(twoSum([3,2,4], 6));
-console.log(twoSum([-1,-2,-3,-4,-5], -8));
-console.log(twoSum([150,24,79,50,88,345,3], 200));
-console.log(twoSum([3,3], 6));
-
-
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([-1, -2, -3, -4, -5], -8));
+console.log(twoSum([150, 24, 79, 50, 88, 345, 3], 200));
+console.log(twoSum([3, 3], 6));
