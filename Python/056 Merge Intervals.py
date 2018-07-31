@@ -50,3 +50,4 @@ arr = [
 ]
 s = Solution()
 print(s.merge(arr))
+
