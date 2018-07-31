@@ -39,7 +39,6 @@ var solveNQueens = function (n) {
         if (set.length === n) {
             let temp = [];
             for (let k = 0; k < n; k++) {
-                
                 let row = Array(n).fill('.');
                 row[set[k]] = 'Q';
                 temp.push(row.join(''));
@@ -48,7 +47,6 @@ var solveNQueens = function (n) {
             return;
         }
         for (let j = 0; j < n; j++) {
-            console.log(j)
             if (isVaild(j, set)) {
                 set.push(j);
                 callback(i + 1, set);
