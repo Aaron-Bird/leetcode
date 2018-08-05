@@ -22,7 +22,7 @@
  */
 var plusOne = function (digits) {
     digits[digits.length - 1] = digits[digits.length - 1] + 1;
-    
+
     let i = digits.length - 2;
     while (i >= 0) {
         if (digits[i + 1] <= 9) break;
@@ -39,6 +39,6 @@ var plusOne = function (digits) {
 };
 
 // test
-console.log(plusOne([1,2,3]));
+console.log(plusOne([1, 2, 3]));
 console.log(plusOne([0]));
 console.log(plusOne([9, 9]));
