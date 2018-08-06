@@ -33,15 +33,14 @@ class Solution(object):
                 i -= 1
             i += 1
 
-
 # test
 s = Solution()
 nums = [2, 0, 2, 1, 1, 0]
 s.sortColors(nums)
 print(nums)
-nums = [1,2,0]
+nums = [1, 2, 0]
 s.sortColors(nums)
 print(nums)
-nums = [2,0,1]
+nums = [2, 0, 1]
 s.sortColors(nums)
 print(nums)
