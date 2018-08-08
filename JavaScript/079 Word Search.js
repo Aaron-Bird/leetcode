@@ -15,6 +15,9 @@
 // Given word = "SEE", return true.
 // Given word = "ABCB", return false.
 
+
+// 深度优先搜索
+// 将走过的路径标记为'#',搜索完毕后再还原回去
 /**
  * @param {character[][]} board
  * @param {string} word
