@@ -19,6 +19,11 @@
 // 将左侧元素的中间作为左子树, 右侧的中间元素作为右子树
 // 按如上做法,依次递归处理左右两侧的元素
 
+// 知识点
+// 二叉查找树(BST Binary Search Tree)
+// BST是一种树结构, 其每一个节点值都大于左子树,且每一个节点值都小于右子树
+
+
 /**
  * Definition for a binary tree node.
  */
@@ -33,7 +38,7 @@ var TreeNode = function(val) {
 var sortedArrayToBST = function(nums) {
   const callback = function(start, end) {
     // 防止回调(+1 -1的时候)越界
-    // 注意不要把等于也算进去
+    // 注意不要把等于算进去
     if (start > end) {
       return null;
     }
