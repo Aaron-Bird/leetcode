@@ -30,7 +30,8 @@
  */
 var buildTree = function (preorder, inorder) {
     function genNode(preL, inL, inR) {
-        if (preL > preorder.length - 1 || inL > inR) return null;
+        if (inL > inR) return null;
+
         let val = preorder[preL];
         let node = new TreeNode(val);
 
@@ -38,8 +39,9 @@ var buildTree = function (preorder, inorder) {
         while (inorder[i] !== val) {
             i++;
         }
+
         node.left = genNode(preL + 1, inL, i - 1);
-        node.right = genNode(preL + i - inL + 1, i + 1, inR);
+        node.right = genNode(preL + (i - inL) + 1, i + 1, inR);
         return node;
     }
     return genNode(0, 0, inorder.length - 1);
@@ -51,4 +53,6 @@ function TreeNode(val) {
     this.left = this.right = null;
 }
 
-console.log(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]));
+console.log(buildTree([3, 9, 20, 15], [9, 3, 15, 20]));
+console.log(buildTree([1,2,3], [3,2,1]));
+console.log(buildTree([1,2], [2,1]));
