@@ -25,7 +25,7 @@
 
 class Solution(object):
     def genNode(self, preL, inL, inR, preorder, inorder):
-        if preL > len(preorder) - 1 or inL > inR:
+        if inL > inR:
             return None
         val = preorder[preL]
         node = TreeNode(val)
